@@ -190,7 +190,7 @@ class RandomFeatureGaussianProcess(nn.Module):
                  custom_random_features_initializer="orf",
                  gp_cov_likelihood='gaussian',
                  gp_output_imagenet_initializer=False,
-                 num_class=2,):
+                 num_classes=2,):
         """Initializes a random-feature Gaussian process layer instance.
 
         Args:
@@ -261,8 +261,8 @@ class RandomFeatureGaussianProcess(nn.Module):
         self._input_norm_layer = nn.LayerNorm(self.gp_hidden_dim)
         self._random_feature = self._make_random_feature_layer()
 
-        self._gp_output_layer = nn.Linear(self.num_inducing, num_class, bias=False)
-        self._gp_output_bias = nn.Parameter(torch.zeros(num_class), requires_grad=self.gp_output_bias_trainable)
+        self._gp_output_layer = nn.Linear(self.num_inducing, num_classes, bias=False)
+        self._gp_output_bias = nn.Parameter(torch.zeros(num_classes), requires_grad=self.gp_output_bias_trainable)
         if gp_output_imagenet_initializer:
             nn.init.normal_(self._gp_output_layer.weight, mean=0.0, std=0.01)
 
