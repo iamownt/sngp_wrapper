@@ -400,7 +400,8 @@ def replace_layer_with_gaussian(
         use_custom_random_features=gp_kwargs["gp_use_custom_random_features"],
         gp_output_bias_trainable=gp_kwargs["gp_output_bias_trainable"],
         custom_random_features_initializer=gp_kwargs["gp_random_feature_type"],
-        gp_output_imagenet_initializer=gp_kwargs["gp_output_imagenet_initializer"],)
+        gp_output_imagenet_initializer=gp_kwargs["gp_output_imagenet_initializer"],
+	num_class=gp_kwargs["num_classes"])
     device = container.parameters().__next__().device
     GaussianProcess = GaussianProcess(out_features).to(device)
     setattr(container, signature, GaussianProcess)
