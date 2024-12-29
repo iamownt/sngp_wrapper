@@ -6,6 +6,8 @@
 
 It's a preview version, so you can install it from the source code.
 ```
+git clone https://github.com/iamownt/sngp_wrapper.git
+cd sngp_wrapper
 pip install -e .
 ```
 
