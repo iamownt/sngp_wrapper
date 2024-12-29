@@ -1,0 +1,2 @@
+from .covert_utils import convert_to_sn_my, replace_layer_with_gaussian
+from .edward_utils import RandomFeatureGaussianProcess

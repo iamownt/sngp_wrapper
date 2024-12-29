@@ -1,6 +1,15 @@
 ## Implementation of [A Simple Approach to Improve Single-Model Deep Uncertainty via Distance-Awareness](https://arxiv.org/abs/2205.00403)
 
 **TL;DL:** A simple approach to improve single-model deep uncertainty by replacing the last layer with a Gaussian process layer. Spectral normalization is applied to any model. Online demo is available at [Google Colab](https://colab.research.google.com/drive/1xhGez-dCh4Ggw_ikGEGD7rfia4cpzjow?usp=sharing)
+
+## Install
+
+It's a preview version, so you can install it from the source code.
+```
+pip install -e .
+```
+
+## Example
 ```
 # Step 1: import the module
 
